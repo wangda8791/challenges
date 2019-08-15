@@ -4,9 +4,8 @@
   "description": "challenge in Reedsy",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "scss": "node-sass --watch scss -o css"
   },
   "author": "Wang Da",
-  "license": "ISC"
+  "license": "MIT"
 }
