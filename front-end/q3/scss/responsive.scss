@@ -1,0 +1,131 @@
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1281px) {
+  
+  //CSS
+  
+}
+
+/* 
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  
+  //CSS
+  
+}
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  
+  //CSS
+  
+}
+
+/* 
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  
+  //CSS
+  
+}
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (max-width: 767px) {
+  
+  body {
+    font-size: 1em;
+  }
+
+  .top-actions {
+    .top-logo {
+      display: none;
+    }
+
+    .top-menu {
+      ul {
+        padding-left: 0px;
+        li {
+          margin: 0px;
+        }
+      }
+    }
+  }
+
+  .top-voted .books-list .book {
+    width: calc(100% - 20px);
+    margin-bottom: 20px;
+    img {
+      width: 200px;
+    }
+  }
+  
+  .featured-book {
+    text-align: center;
+    img {
+      width: 100%;
+      margin-top: 20px;
+      float: none;
+    }
+    .book-info {
+      text-align: left;
+      width: 100%;
+      max-height: none;
+      overflow-y: none;
+    }
+  }
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (max-width: 480px) {
+
+  .top-actions {
+    .container {
+      overflow-y: visible;
+      height: 12em;
+    }
+  }
+
+  .top-voted img {
+    margin-top: 40px;
+  }
+
+  .top-actions .top-menu ul li {
+    display: block;
+  }
+  
+  .main {
+    margin-bottom: 7.5em;
+  }
+
+  footer {
+    ul {
+      height: 10em;
+      padding: 0px;
+      li {
+        display: block;
+        margin: 0px;
+      }
+    }
+  }
+}

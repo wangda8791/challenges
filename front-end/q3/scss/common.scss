@@ -1,0 +1,193 @@
+$text-color: #393939;
+$selected-bgcolor: #edbc01;
+$selected-color: #fcf3d0;
+$info-bgcolor: #faf9f4;
+
+body {
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+  max-width: 780px;
+  min-width: 320px;
+  margin: auto;
+  padding-bottom: 40px;
+  font-size: 0.7em;
+  color: $text-color;
+}
+
+h1 {
+  margin: 0px;
+  padding: 14px 20px;
+  font-weight: 500;
+}
+
+.top-actions {
+  margin: 0 20px;
+  width: calc(100% - 40px);
+  .top-logo {
+    display: inline-block;
+    line-height: 2em;
+    background-color: lightgray;
+    width: 100px;
+    height: 2em;
+    padding: 0px 10px;
+    margin: 15px 10px 0px 10px;
+    border-radius: 5px;
+    text-align: center;
+  }
+  .top-menu {
+    display: inline-block;
+    float: right;
+    ul {
+      text-align: right;
+      height: 2.5em;
+      line-height: 2.5em;
+      li {
+        display: inline-block;
+        list-style-type: none;
+        margin: 0 10px;
+        padding: 0 12px;
+        cursor: pointer;
+      }
+      li.active {
+        background-color: $selected-bgcolor;
+        border-radius: 5px;
+        color: $selected-color;
+      }
+      li:hover {
+        text-decoration: underline;
+      }
+    }
+    ul::after {
+      clear: both;
+    }
+  }
+}
+
+.main {
+  margin: 0 20px;
+  width: calc(100% - 40px);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  min-height: calc(100% - 50px);
+}
+
+.container {
+  overflow-y: auto;
+}
+
+.featured-book {
+  position: relative;
+  background-color: $info-bgcolor;
+  padding: 20px;
+  overflow: auto;
+  h1 {
+    line-height: 100px;
+  }
+  .recommended {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 2px 5px;
+    font-size: 0.8em;
+    background-color: $selected-bgcolor;
+    border-bottom-left-radius: 6px;
+    color: $selected-color;
+  }
+  img {
+    float: left;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 180px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  .book-info {
+    float: right;
+    width: calc(100% - 200px);
+    max-height: 275px;
+    overflow-y: hidden;
+    h2 {
+      margin: 0;
+    }
+    .author {
+      font-size: 1.2em;
+      margin-bottom: 1em;
+    }
+  }
+}
+
+.top-voted {
+  padding: 0 20px;
+  .books-list {
+    width: 100%;
+    .book {
+      position: relative;
+      display: inline-block;
+      width: calc(33% - 32px);
+      text-align: center;
+      background-color: $info-bgcolor;
+      border-radius: 10px;
+      margin-right: 20px;
+      float: left;
+      padding: 10px;
+      img {
+        width: 80px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      .book-info {
+        width: 100%;
+        text-align: left;
+        font-size: 0.8em;
+        h3 {
+          margin-bottom: 0px;
+        }
+      }
+      .position {
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        color: $selected-bgcolor;
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
+        text-align: center;
+        border-radius: 12px;
+        border: 2px solid $selected-bgcolor;
+        font-weight: bold;
+      }
+    }
+    .book:last-child {
+      margin-right: 0px;
+    }
+  }
+}
+
+footer {
+  position: fixed;
+  width: 100%;
+  left: 0px;
+  bottom: 0px;
+  background-color: #292929;
+  ul {
+    text-align: center;
+    list-style-type: none;
+    height: 40px;
+    margin: 0px;
+    li {
+      display: inline-block;
+      line-height: 40px;
+      color: white;
+      margin: 0 20px;
+      a {
+        color: white;
+        text-decoration: none;
+      }
+      a:hover {
+        color: lightgray;
+        text-decoration: underline;
+      }
+    }
+  }
+}
