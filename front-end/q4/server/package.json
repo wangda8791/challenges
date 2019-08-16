@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "scripts": {
-    "server": "node server/src/index"
+    "server": "node src/index"
   },
   "main": "index.js",
   "license": "MIT",
