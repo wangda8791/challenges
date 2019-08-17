@@ -1,0 +1,67 @@
+<template>
+  <section>
+    <div class="book-info">
+      <div class="title">
+        <router-link :to="{ name: 'book-detail', params: { slug:info.slug } }">
+          <h3>{{ info.seq }}. {{ info.title }}</h3>
+        </router-link>
+        <span class="rate">({{ info.rating }}/10)</span>
+      </div>
+      <div class="author">{{ info.author }}</div>
+
+      <div class="synopsis">
+        <p>{{ info.synopsis_ellipsed }}</p>
+      </div>
+
+      <div class="upvote">
+        <div v-if="info.upvoted" class="upvoted">Upvoted</div>
+        <div v-else>Upvote</div>
+        Upvoted {{ info.upvotes }} times
+      </div>
+    </div>
+    
+    <router-link :to="{ name: 'book-detail', params: { slug:info.slug } }">
+      <img :src="info.cover">
+    </router-link>
+  </section>
+</template>
+
+<script>
+export default {
+  name: 'Book',
+  props:{
+    info: Object
+  },
+}
+</script>
+
+<style lang="scss" scoped>
+section {
+  padding: 20px;
+  clear: both;
+  overflow: auto;
+}
+.book-info {
+  float: left;
+  text-align: left;
+  width: calc(100% - 140px);
+  .author {
+    font-style: italic;
+  }
+}
+img {
+  float: right;
+  width: 100px;
+  border-radius: 10px;
+}
+.title {
+  h3 {
+    display: inline-block;
+    color: $yellow-dark;
+    margin-right: 6px;
+  }
+}
+.synopsis {
+  margin-top: 1.5em;
+}
+</style>
