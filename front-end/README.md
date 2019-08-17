@@ -56,14 +56,14 @@ May, 2016 - Jun, 2019
 ## 2. General
 
 ##### 2.1. What kind of front end projects do you enjoy working on? Why?
-  Firstly I enjoy working on front end prject interacting with backend to manage information.
+  - Firstly I enjoy working on front end prject interacting with backend to manage information.
   I have strong background on backend of database designing and rest api development, and so I am good at consuming it also.
 
-  Secondly I love to implement WebRTC based video chat or conference application with major business objectives coming with that functionality. One of those is telehealth consulting projects, which secure messaging, often HIPPA compliant, is the major part with integration of several privacy information related with healthcare, and I think it can be other types also.
+  - Secondly I love to implement WebRTC based video chat or conference application with major business objectives coming with that functionality. One of those is telehealth consulting projects, which secure messaging, often HIPPA compliant, is the major part with integration of several privacy information related with healthcare, and I think it can be other types also.
 
-  Thirdly I like to work on front end project servicing live or VoD streaming. I have video broadcasting, processing and streaming experience also and had been working on it for 4+ years and it's my favorite experience.
+  - Thirdly I like to work on front end project servicing live or VoD streaming. I have video broadcasting, processing and streaming experience also and had been working on it for 4+ years and it's my favorite experience.
 
-  In terms of technical I like to work on `MEAN`, `MEVN` and `MERN` stack. JavaScript is one of my first language which I love and experienced a lot. I like these stacks that all the job is done with fancy JavaScript working.
+  - In terms of technical I like to work on `MEAN`, `MEVN` and `MERN` stack. JavaScript is one of my first language which I love and experienced a lot. I like these stacks that all the job is done with fancy JavaScript working.
 
 ##### 2.2. Which are your favorite features of HTML5? How have you used them before?
   - The canvas, video and audio tags giving great multimedia feature, which I love to use.
