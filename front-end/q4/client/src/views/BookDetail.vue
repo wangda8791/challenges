@@ -95,13 +95,16 @@ export default {
     };
   },
   async created() {
-    try {
-      const book = await BookService.getBook(this.$route.params.slug);
-      const comments = await CommentService.getComments(book.slug);
-      this.book = book;
-      this.comments = comments;
-    } catch (err) {
-      this.message = 'Error occured on server.'
+    if (this.$route && 
+      this.$route.params.slug) {
+      try {
+        const book = await BookService.getBook(this.$route.params.slug);
+        const comments = await CommentService.getComments(book.slug);
+        this.book = book;
+        this.comments = comments;
+      } catch (err) {
+        this.message = 'Error occured on server.'
+      }
     }
   },
 }
