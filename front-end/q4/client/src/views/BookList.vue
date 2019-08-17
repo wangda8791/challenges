@@ -12,10 +12,10 @@
           >Reload</a>
           <div class="search">
             <input
-              ref="searchText"
-              type="text"
-              v-model="keyword"
               v-show="willSearch"
+              ref="searchText"
+              v-model="keyword"
+              type="text"
               @keyup.enter="search"
               @blur="willSearch=false"
             />
@@ -25,10 +25,18 @@
             ><font-awesome-icon icon="search" /></a>
           </div>
         </div>
-        <div class="message" v-if="pagination.total == 0">
+
+        <div
+          v-if="pagination.total == 0"
+          class="message"
+        >
           {{ message }}
         </div>
-        <dl class="list-alt" v-else>
+
+        <dl
+          v-else
+          class="list-alt"
+        >
           <dd 
             v-for="book in booksOfPage"
             :key="book.slug"

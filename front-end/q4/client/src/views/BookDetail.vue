@@ -1,8 +1,11 @@
 <template>
   <section>
-    <div class="message" v-if="message!=''">
+    <div
+      v-if="message!=''"
+      class="message"
+    >
       {{ message }}
-      <br/>
+      <br />
       <router-link :to="{ name: 'book-list' }">
         Go Home
       </router-link>
@@ -50,8 +53,14 @@
           v-for="comment in comments"
           :key="comment.id"
         />
-        <VueEditor v-model="htmlForEditor" :editorToolbar="customToolbar" />
-        <a href="javascript:;" class="button">
+        <VueEditor
+          v-model="htmlForEditor"
+          :editor-toolbar="customToolbar"
+        />
+        <a
+          href="javascript:;"
+          class="button"
+        >
           <font-awesome-icon icon="search" />
           Add Comment
         </a>
