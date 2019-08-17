@@ -38,15 +38,15 @@
 <script>
 export default {
   name: 'Book',
+  filters: {
+    ellipse(value, length) {
+      return value.substring(0, length) + "...";
+    }
+  },
   props: {
     info: {
       type: Object,
       required: true
-    }
-  },
-  filters: {
-    ellipse(value, length) {
-      return value.substring(0, length) + "...";
     }
   }
 }
