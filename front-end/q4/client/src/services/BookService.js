@@ -8,7 +8,6 @@ class BookService {
         const data = res.data;
         const books = data.books.map((book,idx)=>{
           book.seq = idx + 1;
-          book.synopsis_ellipsed = book.synopsis.substring(0, 200) + "...";
           return book;
         });
         resolve({ ...data, books });

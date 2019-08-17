@@ -12,7 +12,7 @@
       </div>
 
       <div class="synopsis">
-        <p>{{ info.synopsis_ellipsed }}</p>
+        <p>{{ info.synopsis | ellipse(200) }}</p>
       </div>
 
       <div class="upvote">
@@ -44,6 +44,11 @@ export default {
       required: true
     }
   },
+  filters: {
+    ellipse(value, length) {
+      return value.substring(0, length) + "...";
+    }
+  }
 }
 </script>
 
