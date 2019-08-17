@@ -92,7 +92,19 @@ May, 2016 - Jun, 2019
   Without that it totally blocks the whole application or severly impact the performance.
 
 
-## 3. [Styling](./q3/README.md)
+## 3. Styling
+
+Install the sass transpiler:
+```javascript
+npm install node-sass -g
+```
+
+Head into `front-end/q3` and transpile scss:
+```javascript
+npm run scss
+```
+
+Open q3.html
 
 ## 4. SPA
   I used Vue.js, and implemented all requirement and bonus note.
