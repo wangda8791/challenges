@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section v-if="info">
     Comment
   </section>
 </template>
@@ -7,8 +7,11 @@
 <script>
 export default {
   name: 'Comment',
-  props:{
-    comment: Object
+  props: {
+    info: {
+      type: Object,
+      required: true
+    }
   },
 }
 </script>

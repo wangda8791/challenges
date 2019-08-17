@@ -10,9 +10,9 @@
     >...</a>
     <a
       v-for="i in pages"
+      :key="i"
       href="javascript:;"
       :class="{'selected':i==curPg}"
-      :key="i"
       @click="toPage(i)"
     >{{ i }}</a>
     <a
@@ -41,14 +41,6 @@
         default: 3
       }
     },
-    watch: {
-      curPg: function (val, oldVal) {
-        this.toPg = val;
-      },
-      page: function(val, oldVal) {
-        this.curPg = val;
-      }
-    },
     data: function () {
       return {
         curPg: 1,
@@ -67,6 +59,14 @@
           pageNums.push(i);
         }
         return pageNums;
+      }
+    },
+    watch: {
+      curPg: function (val, oldVal) {
+        this.toPg = val;
+      },
+      page: function(val, oldVal) {
+        this.curPg = val;
       }
     },
     methods: {

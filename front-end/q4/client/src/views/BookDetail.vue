@@ -52,6 +52,7 @@
         <Comment
           v-for="comment in comments"
           :key="comment.id"
+          :info="comment"
         />
         <VueEditor
           v-model="htmlForEditor"

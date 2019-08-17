@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section v-if="info">
     <div class="book-info">
       <div class="title">
         <router-link :to="{ name: 'book-detail', params: { slug:info.slug } }">
@@ -7,15 +7,24 @@
         </router-link>
         <span class="rate">({{ info.rating }}/10)</span>
       </div>
-      <div class="author">{{ info.author }}</div>
+      <div class="author">
+        {{ info.author }}
+      </div>
 
       <div class="synopsis">
         <p>{{ info.synopsis_ellipsed }}</p>
       </div>
 
       <div class="upvote">
-        <div v-if="info.upvoted" class="upvoted">Upvoted</div>
-        <div v-else>Upvote</div>
+        <div
+          v-if="info.upvoted"
+          class="upvoted"
+        >
+          Upvoted
+        </div>
+        <div v-else>
+          Upvote
+        </div>
         Upvoted {{ info.upvotes }} times
       </div>
     </div>
@@ -29,8 +38,11 @@
 <script>
 export default {
   name: 'Book',
-  props:{
-    info: Object
+  props: {
+    info: {
+      type: Object,
+      required: true
+    }
   },
 }
 </script>
